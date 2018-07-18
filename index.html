@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Samsung</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+  <header class="header">
+    <img class="header__logo" src="img/logo.png" width="217" height="57">
+    <form action="#" class="header__form">
+      <fieldset>
+        <input type="text" class="header__input">
+        <button type="submit" class="header__submit">Поиск</button>
+      </fieldset>
+    </form>
+
+    <ul class="menu header__menu">
+      <li class="header__item">Подарки на 8 марта</li>
+      <li class="header__item">Подарки на 23 февраля</li>
+      <li class="header__item">Подарки на 14 февраля</li>
+      <li class="header__item">Все бренды</li>
+      <li class="header__item header__item-first">Каталог продукции</li>
+    </ul>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Основной раздел</h1>
+
+    <section class="navigation">
+      <h2 class="visually-hidden">Навигация</h2>
+      <ul class="menu navigation__menu">
+        <li class="navigation__item"><a href="#" class="navigation__link">Главная</a></li>
+        <li>Корзина</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="visually-hidden">Корзина</h2>
+      <table class="main-table">
+        <caption class="main-table__caption">Корзина</caption>
+        <thead style="background-color: rgba(189,229,248,0.82); padding: 15px">
+        <tr class="first-row">
+          <td colspan="2" class="first-row__cell">
+            Выделено <span class="first-row__span">45</span>
+          </td>
+          <td colspan="2" class="first-row__cell first-row__cell_second">
+            Удалить отмеченные
+          </td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="main-table__row">
+          <td class="main-table__cell main-table__cell_first">
+            <fieldset>
+              <input type="checkbox" id="item1">
+              <label for="item1">1</label>
+            </fieldset>
+          </td>
+          <td class="main-table__cell main-table__cell_second">
+            <img src="img/knife.png">
+          </td>
+          <td class="main-table__cell main-table__cell_third">
+            Нож складной WENGER Evolution ,"Автобус" ,13 функций, 85 мм.WENGER
+          </td>
+          <td class="main-table__cell_forth">
+
+            <table class="inner-table">
+              <tr>
+                <td class="price__item1 inner-table__cell">990 р</td>
+                <td class="inner-table__cell">
+                  <fieldset>
+                    <label for="quantity__item1" class="visually-hidden">Количество первого товара</label>
+                    <input class="input-quantity" type="text" id="quantity__item1" readonly value="1">
+                  </fieldset>
+                </td>
+                <td class="value__item1 inner-table__cell">990 р</td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+
+        <tr class="main-table__row">
+          <td class="main-table__cell main-table__cell_first">
+            <fieldset>
+              <input type="checkbox" id="item2" checked>
+              <label for="item2">2</label>
+            </fieldset>
+          </td>
+          <td class="main-table__cell main-table__cell_second">
+            <img src="img/bag.png">
+          </td>
+          <td class="main-table__cell main-table__cell_third">Рюкзак WENGER «NEO»</td>
+          <td class="main-table__cell_forth">
+
+            <table class="inner-table">
+              <tr>
+                <td class="price__item2 inner-table__cell">5 500 р</td>
+                <td class="inner-table__cell">
+                  <fieldset>
+                    <label for="quantity__item2" class="visually-hidden">Количество второго товара</label>
+                    <input class="input-quantity" type="text" id="quantity__item2" readonly value="5">
+                  </fieldset>
+                </td>
+                <td class="value__item2 inner-table__cell">27 500 р</td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+
+        <tr class="main-table__row">
+          <td class="main-table__cell main-table__cell_first">
+            <fieldset>
+              <input type="checkbox" id="item3">
+              <label for="item3">3</label>
+            </fieldset>
+          </td>
+          <td class="main-table__cell main-table__cell_second">
+            <img src="img/pen.png">
+          </td>
+          <td class="main-table__cell main-table__cell_third">Перьевая ручка Waterman Hemisphere Essential, перо: нержавеющая сталь. WATERMAN</td>
+          <td class="main-table__cell_forth">
+
+            <table class="inner-table">
+              <tr>
+                <td class="price__item3 inner-table__cell">23 750 р</td>
+                <td class="inner-table__cell">
+                  <fieldset>
+                    <label for="quantity__item3" class="visually-hidden">Количество третьего товара</label>
+                    <input class="input-quantity" type="text" id="quantity__item3" readonly value="7">
+                  </fieldset>
+                </td>
+                <td class="value__item1 inner-table__cell">166 250 р</td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+        </tbody>
+        <tfoot>
+
+          <table class="amount-table">
+            <tr class="amount-row">
+              <td>Промежуточный итог по корзине: </td>
+              <td class="amount-row__number">123 235 p</td>
+            </tr>
+            <tr class="amount-row">
+              <td>В том числе НДС:
+              <td class="amount-row__number">123 235 p</td>
+            </tr>
+            <tr class="amount-row result">
+              <td class="result__cell">Итого:</td>
+              <td class="amount-row__number result__number">123 235 p</td>
+            </tr>
+          </table>
+
+        </tfoot>
+      </table>
+    </section>
+  </main>
+</div>
+  <section class="popup popup_hidden">
+    <table>
+      <caption class="popup-caption">
+        Изменить количество
+      </caption>
+      <tr>
+        <td class="popup__price"></td>
+        <td>
+            <fieldset>
+              <label for="quantity__item" class="visually-hidden">Количество товара</label>
+              <input type="number" id="quantity__item">
+            </fieldset>
+
+            <fieldset>
+              <button class="ad-form__submit">
+                Сохранить
+              </button>
+              <button class="ad-form__reset">
+                Отменить
+              </button>
+            </fieldset>
+        </td>
+        <td class="popup__value"></td>
+      </tr>
+    </table>
+  </section>
+<script src="js/script.js"></script>
+</body>
+</html>

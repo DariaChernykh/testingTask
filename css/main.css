@@ -1,0 +1,318 @@
+@font-face {
+  font-family: PFBeauSansPro-Bold;
+  src: url("../fonts/PFBeauSansPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: PFBeauSansPro-Light;
+  src: url("../fonts/PFBeauSansPro-Light.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: PFBeauSansPro-Reg;
+  src: url("../fonts/PFBeauSansPro-Reg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PF BeauSans Pro Bbook";
+  src: url("../fonts/PFBeauSansPro-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PF BeauSans Pro SemiBold";
+  src: url("../fonts/PFBeauSansPro-SeBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 1100px;
+  margin: 0 85px;
+
+  font-family: ArialMT;
+  font-size: 14px;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.header__logo{
+  margin: 32px  0 0 11px;
+}
+
+.header__form{
+  margin-left: auto;
+}
+
+.header__input{
+  width: 312px;
+  height: 26px;
+
+  box-shadow: inset 0 0 5px 0 rgba(9, 12, 18, 0.16);
+  border: solid 1px #d5d5d5;
+  border-radius: 3px;
+}
+
+.header__submit{
+  width: 68px;
+  height: 29px;
+  margin-left: 3px;
+
+  background-color: #17709a;
+
+  border: none;
+  border-radius: 3px;
+
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.menu{
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  list-style: none;
+}
+
+.header__menu{
+  margin: 38px 0 50px;
+  flex-direction: row-reverse;
+
+  color: #4b4b4b;
+  font-family: PFBeauSansPro-Light;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.header__item{
+  padding: 20px 30px 20px 40px;
+  margin-left: -20px;
+  position: relative;
+
+  border: 1px solid #c2c2c2;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  background: linear-gradient( 90deg, rgb(146,200,225) 0%, rgb(178,218,237) 100%);;
+}
+
+.header__item::after{
+  content: url('../img/arrow.png');
+  position: absolute;
+  top: 30%;
+  right: 10px;
+}
+
+.header__item-first{
+  padding-left: 25px;
+  padding-right: 46px;
+  margin-left: 0;
+  border-bottom-left-radius: 0;
+}
+
+.navigation__menu{
+  width: 100%;
+  margin-bottom: 15px;
+
+  color: #333333;
+  line-height: 28px;
+}
+
+.navigation__item::after{
+  content: "/";
+  margin: 0 6px;
+}
+
+.navigation__link{
+  color: #333333;
+}
+
+.main-table__caption{
+  width: 100%;
+  padding: 0 0 30px 3px;
+  box-sizing: border-box;
+
+  text-align: left;
+  font-family: PFBeauSansPro-Light;
+  font-size: 30px;
+  color: #0a7aeb;
+  text-transform: uppercase;
+}
+
+.main-table{
+  width: 100%;
+  border-collapse: collapse
+}
+
+.first-row{
+  height: 43px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+
+  font-family: "PF BeauSans Pro Bbook";
+  line-height: 30px;
+  color: #333333;
+  background-color: #d9e8ef;
+}
+
+.first-row__cell{
+  padding: 0 15px;
+
+  border: none;
+}
+
+.first-row__span{
+  font-family: "PF BeauSans Pro SemiBold";
+  font-size: 18px;
+}
+
+.first-row__cell_second{
+  text-align: end;
+}
+
+.main-table__row{
+  height: 72px;
+}
+
+.main-table__row:nth-child(even){
+  background-color: #e8e8e8;
+}
+
+.main-table__cell{
+  border-right: 1px dotted black;
+}
+
+.main-table__cell_first{
+  width: 85px;
+  text-align: center;
+}
+
+.main-table__cell_second{
+  width: 95px;
+  text-align: center;
+}
+
+.main-table__cell_third{
+  max-width: 625px;
+  padding: 0 50px 0 25px;
+  box-sizing: border-box;
+
+  color: #252525;
+  line-height: 16px;
+}
+
+.main-table__cell_forth{
+  width: 300px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.inner-table{
+  width: 100%;
+
+  line-height: 18px;
+}
+
+.inner-table__cell{
+  width: 33%;
+}
+
+.input-quantity{
+  width: 49px;
+  height: 22px;
+
+  text-align: center;
+
+  border: solid 1px #bdbdbd;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px 0 rgba(9, 12, 18, 0.12);
+}
+
+.amount-table{
+  table-layout: fixed;
+  width: 50%;
+  float: right;
+}
+
+.amount-row{
+  text-align: right;
+  color: #626262;
+  line-height: 38px;
+}
+
+.amount-row__number{
+  width: 150px;
+  max-width: 50%;
+  padding: 0 15px 0 50px;
+  box-sizing: border-box;
+
+  text-align: left;
+  color: #252525;
+  font-family: ArialMT;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.result__cell{
+  color: #0a7eb5;
+  font-family: PFBeauSansPro-Reg;
+  text-transform: uppercase;
+}
+
+.result__number{
+  padding-left: 10px;
+
+  color: #0a7eb5;
+  font-family: PFBeauSansPro-Bold;
+  font-size: 24px;
+}
+
+.popup_hidden{
+  display: none;
+}
