@@ -17,13 +17,18 @@ function inputHandler(event) {
 
   var input = event.target || event.srcElement;
   var id = input.id;
+  var coords = input.getBoundingClientRect();
+
+  popup.style.left = coords.left - 90 + "px";
+  popup.style.top = coords.bottom + 5 + "px";
 
   popup.classList.remove('popup_hidden');
+  inputPopup.focus();
   inputPopup.value = input.value;
   inputPopup.setAttribute('item_id', id);
 
   setPopupPrice(id);
-  setPopupValue()
+  setPopupValue();
 }
 
 function setPopupPrice(id) {
@@ -99,6 +104,7 @@ submitButton.addEventListener('click', function () {
   item_value.textContent = valuePopup.textContent;
   popup.classList.add('popup_hidden');
   summaryValue();
+  checkInputValue();
 });
 
 resetButton.addEventListener('click', function () {
@@ -112,6 +118,7 @@ itemCheckbox.forEach(function (checkbox) {
 changeInputButton.forEach(function (button) {
   button.addEventListener('click', function (event) {
     inputPopup.value = Number(inputPopup.value) + Number(event.target.textContent + 1);
+
     validatePopup();
   });
 });
@@ -121,8 +128,8 @@ removeSelected.addEventListener('click', function () {
   checked.forEach(function (checkbox) {
     checkbox.parentElement.parentElement.parentElement.remove()
   });
+  popup.classList.add('popup_hidden');
+
   setSelectedItems();
+  summaryValue();
 });
-
-
-
