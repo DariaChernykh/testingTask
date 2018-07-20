@@ -48,7 +48,7 @@
             Выделено <span class="first-row__span">1</span>
           </td>
           <td colspan="2" class="first-row__cell first-row__cell_second">
-            <span class=" ">Удалить отмеченные</span>
+            <span class="remove_checked-elements">Удалить отмеченные</span>
           </td>
         </tr>
         </thead>
@@ -72,13 +72,13 @@
             <table class="inner-table">
               <tr>
                 <td class="price-product1 inner-table__cell">990 р</td>
-                <td class="inner-table__cell inner-table__cell-second">
+                <td class="inner-table__cell_second">
                   <fieldset>
                     <label for="product1" class="visually-hidden">Количество первого товара</label>
                     <input class="input-quantity" type="text" id="product1" readonly value="1">
                   </fieldset>
                 </td>
-                <td class="value-product1 inner-table__cell inner-table__cell-right">990 р</td>
+                <td class="value-product1 inner-table__cell-right">990 р</td>
               </tr>
             </table>
 
@@ -102,20 +102,20 @@
             <table class="inner-table">
               <tr>
                 <td class="price-product2 inner-table__cell">5 500 р</td>
-                <td class="inner-table__cell inner-table__cell-second">
+                <td class="inner-table__cell_second">
                   <fieldset>
                     <label for="product2" class="visually-hidden">Количество второго товара</label>
                     <input class="input-quantity" type="text" id="product2" readonly value="5">
                   </fieldset>
                 </td>
-                <td class="value-product2 inner-table__cell inner-table__cell-right">27 500 р</td>
+                <td class="value-product2 inner-table__cell-right">27 500 р</td>
               </tr>
             </table>
 
           </td>
         </tr>
 
-        <tr class="main-table__row">
+        <tr class="main-table__row main-table__row_last">
           <td class="main-table__cell main-table__cell_first">
             <fieldset>
               <input class="checkbox" type="checkbox" id="item3">
@@ -132,14 +132,14 @@
             <table class="inner-table">
               <tr>
                 <td class="price-product3 inner-table__cell">23 750 р</td>
-                <td class="inner-table__cell inner-table__cell-second">
+                <td class="inner-table__cell_second">
                   <fieldset>
                     <label for="product3" class="visually-hidden">Количество третьего товара</label>
                     <input
                       class="input-quantity" type="text" id="product3" readonly value="7">
                   </fieldset>
                 </td>
-                <td class="value-product3 inner-table__cell inner-table__cell-right">166 250 р</td>
+                <td class="value-product3 inner-table__cell-right">166 250 р</td>
               </tr>
             </table>
 
@@ -152,15 +152,15 @@
             <table class="amount-table">
               <tr class="amount-row">
                 <td>Промежуточный итог по корзине: </td>
-                <td class="amount-row__number sum__number">123 235 p</td>
+                <td class="amount-row__number sum__number">194 740 p</td>
               </tr>
               <tr class="amount-row">
                 <td>В том числе НДС:
-                <td class="amount-row__number tax__number">123 235 p</td>
+                <td class="amount-row__number tax__number">35 053 p</td>
               </tr>
               <tr class="amount-row result">
                 <td class="result__cell">Итого:</td>
-                <td class="amount-row__number result__number">123 235 p</td>
+                <td class="amount-row__number result__number">229 793 p</td>
               </tr>
             </table>
           </td>
@@ -177,7 +177,7 @@
     </caption>
     <tr>
       <td class="popup__cell popup__price"></td>
-      <td class="popup__cell">
+      <td class="popup__cell popup__quantity">
         <fieldset>
           <button type="button" class="input__counter">-</button>
           <label for="quantity__item" class="visually-hidden">Количество товара</label>
