@@ -292,6 +292,8 @@ fieldset {
 
 .main-table__cell_first{
   width: 85px;
+  padding-right: 20px;
+  box-sizing: border-box;
   text-align: center;
 }
 
@@ -321,11 +323,17 @@ fieldset {
   background-image: url("../img/check.png");
 }
 
+.main-table__fieldset{
+  position: relative;
+}
+
 .label{
-  display: inline-block;
-  vertical-align: top;
+  position: absolute;
+  width: 100%;
+  right: 0;
   padding-top: 3px;
 
+  text-align: right;
   cursor: pointer;
 }
 
@@ -555,3 +563,4 @@ fieldset {
 
   color: #006296;
 }
+
