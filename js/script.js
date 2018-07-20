@@ -2,19 +2,18 @@
 
 var mainTable = document.querySelector('.main-table');
 var inputs = Array.from(mainTable.querySelectorAll('input[type="text"]'));
+var selectedElements = mainTable.querySelector('.first-row__span');
+var itemCheckbox = Array.from(mainTable.querySelectorAll('input[type=checkbox]'));
+var removeSelected = mainTable.querySelector('.remove_checked-elements');
 var popup = document.querySelector('.popup');
 var pricePopup = popup.querySelector('.popup__price');
 var inputPopup = popup.querySelector('#quantity__item');
 var valuePopup = popup.querySelector('.popup__value');
-var submitButton = document.querySelector('.popup__submit');
-var resetButton = document.querySelector('.popup__reset');
-var selectedElements = document.querySelector('.first-row__span');
-var itemCheckbox = Array.from(document.querySelectorAll('input[type=checkbox]'));
-var removeSelected = document.querySelector('.remove_checked-elements');
-var changeInputButton = document.querySelectorAll('.input__counter');
+var submitButton = popup.querySelector('.popup__submit');
+var resetButton = popup.querySelector('.popup__reset');
+var changeInputButton = popup.querySelectorAll('.input__counter');
 
 function inputHandler(event) {
-
   var input = event.target || event.srcElement;
   var id = input.id;
   var coords = input.getBoundingClientRect();
@@ -29,6 +28,7 @@ function inputHandler(event) {
 
   setPopupPrice(id);
   setPopupValue();
+  addPopupHandler()
 }
 
 function setPopupPrice(id) {
@@ -64,7 +64,6 @@ function setSelectedItems() {
   selectedElements.textContent = String(checked);
 }
 
-
 function validatePopup() {
   var value = Number(inputPopup.value);
   var min = Number(inputPopup.getAttribute('min'));
@@ -93,8 +92,6 @@ inputs.forEach(function (input) {
   input.addEventListener("click", inputHandler);
 });
 
-inputPopup.addEventListener('keyup', validatePopup);
-
 submitButton.addEventListener('click', function () {
   var item_id = inputPopup.getAttribute('item_id');
   var item_input = document.querySelector('#' + item_id);
@@ -102,12 +99,14 @@ submitButton.addEventListener('click', function () {
 
   item_input.value = inputPopup.value;
   item_value.textContent = valuePopup.textContent;
+
+  deleteButtonHandler();
   popup.classList.add('popup_hidden');
   summaryValue();
-  checkInputValue();
 });
 
 resetButton.addEventListener('click', function () {
+  deleteButtonHandler();
   popup.classList.add('popup_hidden');
 });
 
@@ -115,19 +114,32 @@ itemCheckbox.forEach(function (checkbox) {
   checkbox.addEventListener('change', setSelectedItems);
 });
 
-changeInputButton.forEach(function (button) {
-  button.addEventListener('click', function (event) {
-    inputPopup.value = Number(inputPopup.value) + Number(event.target.textContent + 1);
 
-    validatePopup();
+function test(event) {
+  inputPopup.value = Number(inputPopup.value) + Number(event.target.textContent + 1);
+  validatePopup();
+}
+
+function addPopupHandler() {
+  changeInputButton.forEach(function (button) {
+    button.addEventListener('click', test);
   });
-});
+  inputPopup.addEventListener('keyup', validatePopup);
+}
+
+function deleteButtonHandler() {
+  changeInputButton.forEach(function (button) {
+    button.removeEventListener('click', test);
+  });
+  inputPopup.removeEventListener('keyup', validatePopup);
+}
 
 removeSelected.addEventListener('click', function () {
   var checked = document.querySelectorAll('input[type=checkbox]:checked');
   checked.forEach(function (checkbox) {
     checkbox.parentElement.parentElement.parentElement.remove()
   });
+  deleteButtonHandler();
   popup.classList.add('popup_hidden');
 
   setSelectedItems();
