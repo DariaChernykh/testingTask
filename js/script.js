@@ -28,7 +28,7 @@ function inputHandler(event) {
 
   setPopupPrice(id);
   setPopupValue();
-  addPopupHandler()
+  addPopupHandler();
 }
 
 function setPopupPrice(id) {
@@ -114,22 +114,21 @@ itemCheckbox.forEach(function (checkbox) {
   checkbox.addEventListener('change', setSelectedItems);
 });
 
-
-function test(event) {
+function changeInputPopup(event) {
   inputPopup.value = Number(inputPopup.value) + Number(event.target.textContent + 1);
   validatePopup();
 }
 
 function addPopupHandler() {
   changeInputButton.forEach(function (button) {
-    button.addEventListener('click', test);
+    button.addEventListener('click', changeInputPopup);
   });
   inputPopup.addEventListener('keyup', validatePopup);
 }
 
 function deleteButtonHandler() {
   changeInputButton.forEach(function (button) {
-    button.removeEventListener('click', test);
+    button.removeEventListener('click', changeInputPopup);
   });
   inputPopup.removeEventListener('keyup', validatePopup);
 }
